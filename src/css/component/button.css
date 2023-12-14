@@ -1,0 +1,12 @@
+button {
+    background-color: transparent;
+    border: 2px 2px;
+    border-radius: 10px;
+    border-color: white;
+
+    font-size: 24px;
+    color: white;
+
+    width: 239px;
+    height: 74px;
+}
