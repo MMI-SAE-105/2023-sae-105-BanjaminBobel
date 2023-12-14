@@ -1,0 +1,21 @@
+header {
+    height: 97px;
+    position: sticky;
+}
+
+.nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 125px;
+    gap: 220px;
+    flex-shrink: 0;
+}
+
+.nav__logo {
+    background-color: black;
+    color: white;
+    width: 125px;
+    height: 125px;
+    margin-top: 3px;
+}
