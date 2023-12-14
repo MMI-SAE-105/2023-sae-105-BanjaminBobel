@@ -1,6 +1,7 @@
 header {
     height: 97px;
     position: sticky;
+    z-index: 10;
 }
 
 .nav {
