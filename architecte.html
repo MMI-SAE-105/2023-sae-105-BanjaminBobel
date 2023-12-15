@@ -15,12 +15,16 @@
             <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
         </div>
         <nav class="menu" x-show="menuIsOpen">
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/architecte.html">Architectes</a></li>
-                <li><a href="/oeuvres.html">Oeuvres</a></li>
-                <li><a href="#">Billeterie</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/">Accueil</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="/architecte.html">Architectes</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"> <a class="menu__link" href="/oeuvres.html">Oeuvres</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="#">Billeterie</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
