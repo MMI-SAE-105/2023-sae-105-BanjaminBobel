@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;900&family=Prompt&display=swap');
+
 /* components */
 @import url("./component/button.css");
 @import url("./component/card.css");
@@ -9,3 +11,7 @@
 
 /* pages */
 @import url("./pages/home.css");
+@import url('./pages/architecte.css');
+/* normalize */
+@import url("./normalize.css");
+
