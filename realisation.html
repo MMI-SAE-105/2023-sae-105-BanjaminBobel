@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data='{menuIsOpen:false}'>
+    <header >
+        <div class="header">
+            <a href="index.html"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
+            <button class="header__button" x-show="!menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/MENU.svg" alt=""></button>
+            <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
+        </div>
+        <nav class="menu" x-show="menuIsOpen">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/architecte.html">Architectes</a></li>
+                <li><a href="/oeuvres.html">Oeuvres</a></li>
+                <li><a href="#">Billeterie</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main x-show="!menuIsOpen">
+        <h1 class="pages__title"> National Convention <br /> Center,Qatar </h1>
+        <h2 class="pages__title">2004 - 2011</h2>
+        <img src="./public/img/vagues/Vague2.svg" alt="" class="home__architecte-wave">
+        <section id="archi_photo1">
+            <div class="archi_content">
+                <img src="./public/img/Illustrations/image6.png" alt="" class="home__realisation">
+                <p class="archi__content--text">Arata Isozaki a laissé sa marque distinctive sur le Qatar National Convention Centre (QNCC), un projet emblématique inauguré en 2011 à Doha. La conception de ce centre de conventions de 177 000 mètres carrés illustre la fusion audacieuse entre les influences culturelles locales et la vision avant-gardiste d'Isozaki. La forme architecturale du QNCC est un témoignage de sa créativité, avec des lignes géométriques contemporaines et des éléments du design islamique, créant ainsi un édifice qui s'harmonise avec l'environnement tout en capturant l'esprit moderne.</p>  
+            </div>
+
+        <section id="archi_photo1">
+             <div class="archi_content">
+                <img src="./public/img/image10.png" alt="" class="Photo__1">
+                <p class="archi__content--text">La flexibilité d'utilisation est une caractéristique clé de la conception d'Isozaki pour le QNCC. Les espaces polyvalents peuvent accueillir divers événements, des conférences aux expositions, démontrant la capacité du bâtiment à s'adapter aux besoins changeants de la communauté. De plus, la durabilité a été une préoccupation centrale, avec des technologies d'économie d'énergie et des systèmes de gestion de l'eau, soulignant l'engagement d'Isozaki envers une conception respectueuse de l'environnement.</p>  
+            </div>
+
+        <section id="archi_photo1">
+            <div class="archi_content">
+                <img src="./public/img/IMG11.png" alt="" class="Photo__1">
+                <p class="archi__content--text">Le centre incarne également l'intégration harmonieuse de technologies modernes. Les équipements audiovisuels de pointe et les installations de connectivité positionnent le QNCC comme un lieu de choix pour des événements de renommée mondiale. Ainsi, la conception du Qatar National Convention Centre témoigne de la capacité visionnaire d'Arata Isozaki à créer un espace qui allie fonctionnalité, esthétique, et durabilité, tout en reflétant les caractéristiques culturelles distinctives de la région.</p>  
+            </div>
+        
+        <section id="archi_photo1">
+            <div class="archi_content">
+                <img src="./public/img/IMG12.png" alt="" class="Photo__1">
+                <p class="archi__content--text">En conclusion, le Qatar National Convention Centre demeure une pièce maîtresse dans l'héritage architecturale d'Arata Isozaki, incarnant son génie créatif et son engagement envers l'innovation. En fusionnant habilement les éléments culturels locaux avec une esthétique contemporaine, Isozaki a façonné un espace qui va au-delà de sa fonction première de centre de conventions, devenant une icône architecturale emblématique à Doha. Avec son design intemporel et ses avancées technologiques, le QNCC perpétue le pouvoir transformateur de l'architecture, laissant une empreinte durable sur le paysage urbain et témoignant de la capacité d'Isozaki à façonner des espaces qui résistent à l'épreuve du temps et continuent d'inspirer les générations futures.</p>  
+            </div>
+            
+            
+        </section>
+
+        
+
+    <footer x-show="!menuIsOpen">
+        <a href="" class="footer__contact"><h3 >Contact</h3></a>
+
+        <p class="footer__infos">Fondation Cartier, 261 Bd Raspail <br/> 75014 Paris <br/>03 09 07 48 17 <br/> artist.contact@gmail.com</p>
+        <div class="footer__down">
+            <a href="index.html"><img src="./public/img/artist.svg" alt="" class="footer__down-logo"></a>
+            <div class="footer__down-social">
+                <a href=""><img src="./public/img/icon/socials/insta.svg" alt=""></a>
+                <a href=""><img src="./public/img/icon/socials/Twitter.svg" alt=""></a>
+                <a href=""><img src="./public/img/icon/socials/facebook.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/main.css">
     <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <header>
+<body x-data='{menuIsOpen:false}'>
+    <header >
         <div class="header">
-            <a href="#"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
-            <a href="#"><img  src="./public/img/icon/MENU.svg" alt=""></a>
+            <a href="index.html"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
+            <button class="header__button" x-show="!menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/MENU.svg" alt=""></button>
+            <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
         </div>
+        <nav class="menu" x-show="menuIsOpen">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/">Accueil</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="/architecte.html">Architectes</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"> <a class="menu__link" href="/oeuvres.html">Oeuvres</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="#">Billeterie</a></li>
+                <hr class="mmenu__separation">
+                <li class="menu__item"><a class="menu__link" href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main x-show="!menuIsOpen">
         <h1 class="pages__title">Isozaki <br /> Visionnaire de l'Architecture</h1>
 
         <img src="./public/img/vagues/Vague1.svg" alt="" class="home__date-wave">
@@ -44,11 +59,11 @@
                 <li class="prices--item">Fondation Cartier Pass | 18€ - 50€</li>
                 <li class="prices--item">Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants | Gratuit</li>
             </ul>
-            <a href="/dsfsdf.html"><button>Billeterie</button></a>
+            <a href="/dsfsdf.html"><button class="button">Billeterie</button></a>
         </section>
     </main>
 
-    <footer>
+    <footer x-show="!menuIsOpen">
         <a href="/contact.html" ><h3 class="footer__contact">Contact</h3></a>
 
         <p class="footer__infos">Fondation Cartier, 261 Bd Raspail <br/> 75014 Paris <br/>03 09 07 48 17 <br/> artist.contact@gmail.com</p>

@@ -4,6 +4,7 @@
 @import url("./component/button.css");
 @import url("./component/card.css");
 @import url("./component/form.css");
+@import url("./component/menu.css");
 
 /* layout */
 @import url("./layout/footer.css");
@@ -12,6 +13,9 @@
 /* pages */
 @import url("./pages/home.css");
 @import url('./pages/architecte.css');
+@import url('./pages/oeuvres.css');
+@import url('./pages/realisation.css');
+@import url('./pages/contact.css'); 
 /* normalize */
 @import url("./normalize.css");
 

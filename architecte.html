@@ -5,49 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/main.css">
     <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <header>
-        <div class="nav">
-            <a href="#"><img class="nav__logo" src="./public/img/artist.svg" alt=""></a>
-            <a href="#"><img  src="./public/img/icon/MENU.svg" alt=""></a>
+<body x-data='{menuIsOpen:false}'>
+    <header >
+        <div class="header">
+            <a href="index.html"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
+            <button class="header__button" x-show="!menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/MENU.svg" alt=""></button>
+            <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
         </div>
+        <nav class="menu" x-show="menuIsOpen">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/architecte.html">Architectes</a></li>
+                <li><a href="/oeuvres.html">Oeuvres</a></li>
+                <li><a href="#">Billeterie</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main x-show="!menuIsOpen">
         <h1 class="pages__title"> Arata <br /> Isozaki </h1>
-
+        <p class="architecte__citation">“Je ne pouvais pas m'arrêter à un seul style. 
+            La seule constante de mon travail a été le changement.”</p>
         <img src="./public/img/vagues/Vague2.svg" alt="" class="home__architecte-wave">
         <section id="archi_photo1">
             <div class="archi_content">
                 <img src="./public/img/Photo 1.png" alt="" class="Photo__1">
-                <p>Arata Isozaki, architecte japonais né en 1931, est célèbre pour sa carrière novatrice et diversifiée. Associé au mouvement du métabolisme dans les années 1960, il a ensuite évolué vers une esthétique postmoderne. Parmi ses œuvres emblématiques, citons le MOCA à Los Angeles et la Cité de la Musique et de la Danse à Strasbourg. Lauréat du Prix Pritzker en 2019, Isozaki a reçu des éloges pour sa capacité à fusionner des influences culturelles variées dans des créations architecturales exceptionnelles. Son héritage continue d'inspirer les architectes du monde entier.</p>  
+                <p class="archi__content--text">Arata Isozaki, architecte japonais né en 1931, est célèbre pour sa carrière novatrice et diversifiée. Associé au mouvement du métabolisme dans les années 1960, il a ensuite évolué vers une esthétique postmoderne. Parmi ses œuvres emblématiques, citons le MOCA à Los Angeles et la Cité de la Musique et de la Danse à Strasbourg. Lauréat du Prix Pritzker en 2019, Isozaki a reçu des éloges pour sa capacité à fusionner des influences culturelles variées dans des créations architecturales exceptionnelles. Son héritage continue d'inspirer les architectes du monde entier.</p>  
             </div>
 
         <section id="archi_photo1">
              <div class="archi_content">
                 <img src="./public/img/mage2.jpg" alt="" class="Photo__1">
-                <p>Isozaki a débuté sa carrière dans les années 1960, époque à laquelle il a été associé au métabolisme, un mouvement architectural japonais qui prônait des structures évolutives et flexibles pour répondre aux besoins changeants de la société. Au fil des années, son travail a évolué vers une esthétique postmoderne, explorant une variété de styles et de formes.</p>  
+                <p class="archi__content--text">Isozaki a débuté sa carrière dans les années 1960, époque à laquelle il a été associé au métabolisme, un mouvement architectural japonais qui prônait des structures évolutives et flexibles pour répondre aux besoins changeants de la société. Au fil des années, son travail a évolué vers une esthétique postmoderne, explorant une variété de styles et de formes.</p>  
             </div>
 
         <section id="archi_photo1">
             <div class="archi_content">
                 <img src="./public/img/image3.jpg" alt="" class="Photo__1">
-                <p>Ses réalisations emblématiques incluent le Musée d'art contemporain de Los Angeles (MOCA) aux États-Unis, le Palau Sant Jordi à Barcelone, et la Cité de la Musique et de la Danse à Strasbourg. Isozaki est salué pour sa capacité à fusionner des influences culturelles variées avec des concepts architecturaux novateurs, créant ainsi des espaces qui transcendent les frontières géographiques et culturelles.</p>  
+                <p class="archi__content--text">Ses réalisations emblématiques incluent le Musée d'art contemporain de Los Angeles (MOCA) aux États-Unis, le Palau Sant Jordi à Barcelone, et la Cité de la Musique et de la Danse à Strasbourg. Isozaki est salué pour sa capacité à fusionner des influences culturelles variées avec des concepts architecturaux novateurs, créant ainsi des espaces qui transcendent les frontières géographiques et culturelles.</p>  
             </div>
         
         <section id="archi_photo1">
             <div class="archi_content">
                 <img src="./public/img/image4.png" alt="" class="Photo__1">
-                <p>Arata Isozaki a été récompensé par de nombreux prix prestigieux, dont le Prix Pritzker en 2019, la plus haute distinction dans le domaine de l'architecture. Son impact sur le monde de l'architecture va au-delà de ses créations physiques, reflétant également son engagement envers la compréhension profonde du contexte culturel et social dans lequel ses œuvres prennent vie. Aujourd'hui, son héritage architectural continue d'inspirer les architectes du monde entier.</p>  
+                <p class="archi__content--text">Arata Isozaki a été récompensé par de nombreux prix prestigieux, dont le Prix Pritzker en 2019, la plus haute distinction dans le domaine de l'architecture. Son impact sur le monde de l'architecture va au-delà de ses créations physiques, reflétant également son engagement envers la compréhension profonde du contexte culturel et social dans lequel ses œuvres prennent vie. Aujourd'hui, son héritage architectural continue d'inspirer les architectes du monde entier.</p>  
             </div>
             
             
         </section>
+    </main>
 
         
 
-    <footer>
+    <footer x-show="!menuIsOpen">
         <a href="" class="footer__contact"><h3 >Contact</h3></a>
 
         <p class="footer__infos">Fondation Cartier, 261 Bd Raspail <br/> 75014 Paris <br/>03 09 07 48 17 <br/> artist.contact@gmail.com</p>

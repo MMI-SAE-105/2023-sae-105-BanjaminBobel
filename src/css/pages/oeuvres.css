@@ -1,0 +1,38 @@
+.home__oeuvres-wave{
+    position:absolute;
+    z-index:1
+}
+
+#oeuvres__date{
+    position:relative;
+    z-index:1;
+    margin-top:95px;
+    text-align:center;
+}
+
+.home__oeuvres-content-p{
+    color:white;
+    text-align:center;
+    width:100%
+}
+
+.home__oeuvres-button{
+    text-align:center;
+}
+
+.home__oeuvres-content-img{
+    width:100%;
+}
+
+.home__oeuvres-content-img-modifier{
+    width:100%;
+}
+
+.home__oeuvres-content--modifier{
+    display:grid;
+    grid-template-columns:70% 30%
+}
+
+.home__oeuvres--text{
+    margin-top:100px;
+}

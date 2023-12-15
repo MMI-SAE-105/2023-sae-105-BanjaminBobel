@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/main.css">
+    <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body x-data='{menuIsOpen:false}'>
+    <header >
+        <div class="header">
+            <a href="index.html"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
+            <button class="header__button" x-show="!menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/MENU.svg" alt=""></button>
+            <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
+        </div>
+        <nav class="menu" x-show="menuIsOpen">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/architecte.html">Architectes</a></li>
+                <li><a href="/oeuvres.html">Oeuvres</a></li>
+                <li><a href="#">Billeterie</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main x-show="!menuIsOpen">
+        <img class="contact__wave" src="/public/img/vagues/Vague8.svg" alt="">
+        <div class="contact__content">
+        <h1>Contact</h1>
+        <form class="contact__form">
+            <label class="contact__label" for="email">Email</label>
+            <input class="contact__input" name="email" width="40" type="text">
+            <label class="contact__label" for="message">Message</label>
+            <textarea class="contact__input"  name="message" id="message" cols="30" rows="10"></textarea> 
+            <a class="contact__button" href="/dsfsdf.html"><input class="button" type="submit"></a>           
+        </form>
+    </div>
+    </main>
+
+    <footer x-show="!menuIsOpen">
+        <a href="/contact.html" ><h3 class="footer__contact">Contact</h3></a>
+
+        <p class="footer__infos">Fondation Cartier, 261 Bd Raspail <br/> 75014 Paris <br/>03 09 07 48 17 <br/> artist.contact@gmail.com</p>
+        <div class="footer__down">
+            <a href="index.html"><img src="./public/img/artist.svg" alt="" class="footer__down-logo"></a>
+            <div class="footer__down-social">
+                <a href=""><img src="./public/img/icon/socials/insta.svg" alt=""></a>
+                <a href=""><img src="./public/img/icon/socials/Twitter.svg" alt=""></a>
+                <a href=""><img src="./public/img/icon/socials/facebook.svg" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

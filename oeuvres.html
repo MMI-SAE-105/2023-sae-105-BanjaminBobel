@@ -5,44 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/main.css">
     <title>Document</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body>
-    <header>
-        <div class="nav">
-            <a href="#"><img class="nav__logo" src="./public/img/artist.svg" alt=""></a>
-            <a href="#"><img  src="./public/img/icon/MENU.svg" alt=""></a>
+<body x-data='{menuIsOpen:false}'>
+    <header >
+        <div class="header">
+            <a href="index.html"><img id="nav__logo"src="./public/img/artist.svg" alt=""></a>
+            <button class="header__button" x-show="!menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/MENU.svg" alt=""></button>
+            <button class="header__button" x-show="menuIsOpen" @click="menuIsOpen = !menuIsOpen"><img  src="./public/img/icon/CLOSE.svg" alt=""></button>
         </div>
+        <nav class="menu" x-show="menuIsOpen">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/architecte.html">Architectes</a></li>
+                <li><a href="/oeuvres.html">Oeuvres</a></li>
+                <li><a href="#">Billeterie</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main x-show="!menuIsOpen">
         <h1 class="pages__title"> Oeuvres <br /> Architecturales</h1>
 
-        <img src="./public/img/vagues/Vague4.svg" alt="" class="home__date-wave">
-        <section id="home__date">
-            <div class="home__date-content">
+        <img src="./public/img/vagues/Vague4.svg" alt="" class="home__oeuvres-wave">
+        <section id="oeuvres__date">
+            <div class="home__oeuvres-content">
                 <img src="./public/img/Illustrations/image5.png" alt="" class="home__date-content-img">
-                <p class="home__date-content-p">Fondation Cartier, 261 Bd Raspail, 75014 Paris </p>
+                <p class="home__oeuvres-content-p">Fondation Cartier, 261 Bd Raspail, 75014 Paris </p>
+                <p class="home__oeuvres-content-p">2008 - 2014</p>
+                <a class="home__oeuvres-button" href="/"><button class="button">Voir plus</button></a>
             </div>
             
         </section>
 
-        <section id="home__horaire">
-            <h1 class="pages__title">Horaires</h1>
-
-            <p class="font-body1">Tout les jours : 11h à 20h <br /> Lundi : Fermé <br /> Mardi : 11h à 22h</p>
-            <p class="font-body2 home__horaire-p">Ferletyre des sakkes débyte à 19h45 <br /> (21h45 Mardi)</p>
+        <section id="oeuvres__date">
+            <div class="home__oeuvres-content">
+                <img src="./public/img/Illustrations/image6.png" alt="" class="home__oeuvres-content-img">
+                <p class="home__oeuvres-content-p">National Convention Center, Qatar</p>
+                <p class="home__oeuvres-content-p">2004 - 2011</p>
+                <a class="home__oeuvres-button" href="/"><button class="button">Voir plus</button></a>
+            </div>
+            
         </section>
+        <section id="oeuvres__date">
+            <div class="home__oeuvres-content">
+                <img src="./public/img/Illustrations/image7.png" alt="" class="home__oeuvres-content-img">
+                <p class="home__oeuvres-content-p">La Casa del Hombre A Coruña, Spain</p>
+                <p class="home__oeuvres-content-p">1993 - 1995</p>
+                <a class="home__oeuvres-button" href="/"><button class="button">Voir plus</button></a>
+            </div>
+            
+        </section>
+        <section id="oeuvres__date">
+            <div class="home__oeuvres-content">
+                <img src="./public/img/Illustrations/image8.png" alt="" class="home__oeuvres-content-img">
+                <p class="home__oeuvres-content-p">National Convention Center, Qatar</p>
+                <p class="home__oeuvres-content-p">2004 - 2011</p>
+                <a class="home__oeuvres-button" href="/"><button class="button">Voir plus</button></a>
+            </div>
+            
+        </section>
+        <section id="oeuvres__date">
+            <div class="home__oeuvres-content--modifier">
+                <div class="home__oeuvres--text">
+                <p class="home__oeuvres-content-p">National Convention Center, Qatar</p>
+                <p class="home__oeuvres-content-p">2004 - 2011</p>
+                <a class="home__oeuvres-button" href="/"><button class="button">Voir plus</button></a>
+                </div>
+                <img src="./public/img/Illustrations/Imag9.png" alt="" class="home__oeuvres-content-img-modifier">
 
-        <img src="./public/img/vagues/Vague2.svg" alt="" class="home__date-wave">
-        <section id="home__tarif">
-            <h1 class="pages__title">Tarifs</h1>
-            <p class="font-body1">Plein tarif | 11€ <br/> Tarif réduit | 7,50€ <br/> Réduction 13 - 25 ans | 5 € <br /> Fondation Cartier Pass | 18€ - 50€ <br/> Moins de 13 ans, Laissez-passer annuel, carte Icom, carte de presse, carte d'invalidité, Fondation Cartier Pass, Etudiants | Gratuit</p>
-            <a href="/dsfsdf.html"><button>Billeterie</button></a>
+            </div>
+            
         </section>
     </main>
 
-    <footer>
-        <a href="" class="footer__contact"><h3 >Contact</h3></a>
+    <footer x-show="!menuIsOpen">
+        <a href="/contact.html" ><h3 class="footer__contact">Contact</h3></a>
 
         <p class="footer__infos">Fondation Cartier, 261 Bd Raspail <br/> 75014 Paris <br/>03 09 07 48 17 <br/> artist.contact@gmail.com</p>
         <div class="footer__down">

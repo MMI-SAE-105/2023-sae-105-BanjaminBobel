@@ -1,0 +1,33 @@
+.contact__wave{
+    position:absolute;
+    z-index:1;
+    top:0;
+}
+
+.contact__content{
+    position:relative;
+    z-index:1
+}
+
+.contact__form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.contact__input{
+    width:90%;
+    background:none;
+    margin:auto;
+    border:dashed white;
+    color:white;
+}
+
+.contact__label{
+    color:white;
+    margin-left:20px
+}
+
+.contact__button{
+    text-align:center;
+}
